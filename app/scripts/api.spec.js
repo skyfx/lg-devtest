@@ -1,4 +1,4 @@
-describe('api api', function () {
+describe('api module', function() {
     'use strict';
 
     var movieListStub = [
@@ -23,16 +23,28 @@ describe('api api', function () {
             img: 'https://lg-devtest.herokuapp.com/images/box_the_kings_speech.png'
         }];
 
-    it('should fetch data from the remote server', function() {
+    describe('data fetching', function() {
 
-        var movieList = api.getMovieList();
-        var listItem;
+        var movieList;
 
-        expect(movieList.size).toBeGreaterThan(0);
+        beforeEach(function(done) {
+            api.getMovieList(function(error, data) {
+                movieList = data;
+                done();
+            });
+        });
 
-        listItem = movieList[0];
+        it('should fetch data from the remote server', function() {
 
-        expect(listItem.img).toMatch(/png$/);
+            var listItem;
+
+            expect(movieList.length).toBeGreaterThan(0);
+
+            listItem = movieList[0];
+
+            expect(listItem.img).toMatch(/png$/);
+
+        });
 
     });
 
@@ -40,7 +52,7 @@ describe('api api', function () {
 
         var filteredList = api.filterMovies(movieListStub, 'action');
 
-        expect(filteredList.size).toBe(1);
+        expect(filteredList.length).toBe(1);
     });
 
     it('should sort by IMDB rating', function() {
