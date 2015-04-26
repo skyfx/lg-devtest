@@ -3,6 +3,6 @@
 
     var querySelector = document.querySelector.bind(document);
 
-    querySelector('main p').textContent = 'World!!!';
+    querySelector('main p').textContent = api.hello;
 
 })();

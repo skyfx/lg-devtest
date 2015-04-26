@@ -12,5 +12,8 @@
   "strict": true,
   "undef": true,
   "unused": true,
-  "eqnull": true
+  "eqnull": true,
+    "globals": {
+        "api": true
+    }
 }

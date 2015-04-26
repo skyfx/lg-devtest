@@ -3,7 +3,7 @@ Lg code assignment
 
 [![Build Status](https://travis-ci.org/skyfx/lg-devtest.svg?branch=master)](https://travis-ci.org/skyfx/lg-devtest)
 
-Implementation of a box art carousel fetching data from an external service.
+Over-engineered implementation of a box art carousel fetching data from an external service.
 
 Continuously deployed by travis at https://skyfx.github.io/lg-devtest
 
