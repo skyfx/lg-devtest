@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - '0.12'
+script: npm run-script deploy
+env:
+  global:
+    - GH_REF: github.com/skyfx/lg-devtest.git
+    - secure: ZDGI6vex3pF483fKg0PEnkDa5u53NHAuOHXWB4OCro4Jr+ofuviBogzQOt5lPMiQdLZ1oaWy4npwgPfynjpuM7XCYAWw2L6SdXW4Tufy4ABEOWhrmEGDTnAfJocC9XMrVb8qQkPujtsHehwHit+3TEEG6ZdrmYxEm4t5iHF0rn0=

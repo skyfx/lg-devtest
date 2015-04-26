@@ -3,8 +3,10 @@ Lg code assignment
 
 Implementation of a box art carousel fetching data from an external service.
 
-Run
----
+Continuously deployed by travis at https://skyfx.github.io/lg-devtest
+
+Run from source
+---------------
 
   * clone repo
   * npm start
