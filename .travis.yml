@@ -1,4 +1,3 @@
-sudo: true
 language: node_js
 node_js:
   - '0.12'
@@ -6,6 +5,5 @@ script: npm run-script build
 after_success: npm run-script deploy
 env:
   global:
-    - PHANTOMJS2_DOWNLOAD_URL: https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
     - GH_REF: github.com/skyfx/lg-devtest.git
     - secure: ZDGI6vex3pF483fKg0PEnkDa5u53NHAuOHXWB4OCro4Jr+ofuviBogzQOt5lPMiQdLZ1oaWy4npwgPfynjpuM7XCYAWw2L6SdXW4Tufy4ABEOWhrmEGDTnAfJocC9XMrVb8qQkPujtsHehwHit+3TEEG6ZdrmYxEm4t5iHF0rn0=

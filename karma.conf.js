@@ -5,6 +5,7 @@ module.exports = function karmaConfig(config) {
         basePath: '',
         frameworks: ['jasmine'],
         files: [
+            './node_modules/phantomjs-polyfill/bind-polyfill.js',
             'app/scripts/**/*.js'
         ],
         exclude: [
@@ -16,7 +17,7 @@ module.exports = function karmaConfig(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['PhantomJS2', 'Chrome'],
+        browsers: ['PhantomJS', 'Chrome'],
         singleRun: false
     });
 };
