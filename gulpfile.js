@@ -13,7 +13,6 @@ var AUTOPREFIXER_BROWSERS = [
     'ios >= 8'
 ];
 
-// Lint JavaScript
 gulp.task('jshint', function jshint() {
     return gulp.src('app/scripts/**/*.js')
         .pipe(reload({stream: true, once: true}))
@@ -22,7 +21,6 @@ gulp.task('jshint', function jshint() {
         .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-// Copy all files at the root level (app)
 gulp.task('copy', function copy() {
     return gulp.src([
         'app/*',
@@ -44,7 +42,6 @@ gulp.task('styles', function styles() {
         .pipe($.size({title: 'styles'}));
 });
 
-// Scan your HTML for assets & optimize them
 gulp.task('html', function html() {
     var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
@@ -58,10 +55,8 @@ gulp.task('html', function html() {
         .pipe($.size({title: 'html'}));
 });
 
-// Clean output directory
-gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist/*'], {dot: true}));
 
-// Watch files for changes & reload
 gulp.task('serve', ['styles'], function serve() {
     browserSync({
         notify: false,
