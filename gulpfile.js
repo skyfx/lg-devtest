@@ -26,7 +26,7 @@ gulp.task('test', function test(done) {
     karma.start({
         configFile: __dirname + '/karma.conf.js',
         singleRun: true,
-        browsers: ['PhantomJS2']
+        browsers: ['PhantomJS']
     }, done);
 });
 
