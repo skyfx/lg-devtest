@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   - '0.12'
-script: npm run-script deploy
+script: npm run-script build
+after_success: npm run-script deploy
 env:
   global:
     - GH_REF: github.com/skyfx/lg-devtest.git

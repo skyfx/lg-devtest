@@ -1,6 +1,7 @@
 {
   "browser": true,
   "node": true,
+  "jasmine": true,
   "camelcase": true,
   "eqeqeq": true,
   "indent": 4,

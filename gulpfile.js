@@ -6,6 +6,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var karma = require('karma').server;
 
 var AUTOPREFIXER_BROWSERS = [
     'chrome >= 42',
@@ -19,6 +20,14 @@ gulp.task('jshint', function jshint() {
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
+
+gulp.task('test', function test(done) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS2']
+    }, done);
 });
 
 gulp.task('copy', function copy() {
@@ -82,6 +91,6 @@ gulp.task('serve:dist', ['default'], function serveDist() {
 gulp.task('default', ['clean'], function defaultTask(cb) {
     runSequence(
         'styles',
-        ['jshint', 'html', 'copy'],
+        ['jshint', 'html', 'copy', 'test'],
         cb);
 });

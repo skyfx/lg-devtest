@@ -1,39 +1,44 @@
 {
-    "name": "lg-devtest",
-    "version": "1.0.0",
-    "description": "Lg code assignment",
-    "scripts": {
-        "prestart": "npm install",
-        "start": "gulp serve",
-        "install": "gulp",
-        "test": "echo \"No test specified yet\"",
-        "deploy": "./deploy-ghpages.sh"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/skyfx/lg-devtest.git"
-    },
-    "author": "Chiel Kas",
-    "bugs": {
-        "url": "https://github.com/skyfx/lg-devtest/issues"
-    },
-    "homepage": "https://skyfx.github.io/lg-devtest",
-    "devDependencies": {
-        "browser-sync": "^2.6.5",
-        "del": "^1.1.1",
-        "gulp": "^3.8.11",
-        "gulp-autoprefixer": "^2.2.0",
-        "gulp-changed": "^1.2.1",
-        "gulp-csso": "^1.0.0",
-        "gulp-if": "^1.2.5",
-        "gulp-jshint": "^1.10.0",
-        "gulp-load-plugins": "^0.10.0",
-        "gulp-minify-html": "^1.0.2",
-        "gulp-size": "^1.2.1",
-        "gulp-sourcemaps": "^1.5.2",
-        "gulp-uglify": "^1.2.0",
-        "gulp-useref": "^1.1.2",
-        "jshint-stylish": "^1.0.1",
-        "run-sequence": "^1.1.0"
-    }
+  "name": "lg-devtest",
+  "version": "1.0.0",
+  "description": "Lg code assignment",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "gulp serve",
+    "test": "gulp test",
+    "deploy": "./deploy-ghpages.sh",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyfx/lg-devtest.git"
+  },
+  "author": "Chiel Kas",
+  "bugs": {
+    "url": "https://github.com/skyfx/lg-devtest/issues"
+  },
+  "homepage": "https://skyfx.github.io/lg-devtest",
+  "devDependencies": {
+    "browser-sync": "^2.6.5",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.10.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-html": "^1.0.2",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.1.2",
+    "jasmine-core": "^2.2.0",
+    "jshint-stylish": "^1.0.1",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs2-launcher": "^0.1.5",
+    "run-sequence": "^1.1.0"
+  }
 }
