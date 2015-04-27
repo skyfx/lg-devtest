@@ -2,7 +2,6 @@
     'use strict';
 
     global.api = {
-        hello: 'world',
         getMovieList: getMovieList,
         filterMovies: filterMovies,
         sortMovies: sortMovies
@@ -19,7 +18,7 @@
             if (request.status >= 200 && request.status < 400) {
                 var data = JSON.parse(request.responseText);
 
-                data.data.forEach(function (entry) {
+                data.data.forEach(function forEach(entry) {
                     result = result.concat(entry.assets);
                 });
 
@@ -39,13 +38,13 @@
     function filterMovies(movieList, genre) {
         var regex = new RegExp(genre, 'i');
 
-        return movieList.filter(function (movie) {
+        return movieList.filter(function filter(movie) {
             return movie.genre.match(regex);
         });
     }
 
     function sortMovies(movieList) {
-        return movieList.sort(function (a, b) {
+        return movieList.sort(function sort(a, b) {
             a = a.imdb;
             b = b.imdb;
             if (a < b) {
