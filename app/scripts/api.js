@@ -44,12 +44,12 @@
     }
 
     function sortMovies(movieList) {
-        return movieList.sort(function sort(a, b) {
+        return movieList.sort(function sortDescending(a, b) {
             a = a.imdb;
             b = b.imdb;
-            if (a < b) {
+            if (a > b) {
                 return -1;
-            } else if (a > b) {
+            } else if (a < b) {
                 return 1;
             } else {
                 return 0;
