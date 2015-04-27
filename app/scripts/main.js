@@ -1,7 +1,7 @@
 (function main() {
     'use strict';
 
-    var paneList = document.querySelector('.carousel .panes');
+    var carousel = document.querySelector('.carousel');
     var listItemTemplate = createListItemTemplate();
 
     api.getMovieList(function processMovies(error, movieList) {
@@ -11,6 +11,11 @@
         var sorted = api.sortMovies(filtered);
 
         sorted.forEach(createListItem);
+
+        $('.carousel').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
     });
 
     function createListItem(movie) {
@@ -18,11 +23,11 @@
         var img = newListItem.querySelector('img');
 
         newListItem.querySelector('h2').textContent = movie.title;
-        newListItem.querySelector('p').textContent = movie.imdb;
+        newListItem.querySelector('p').textContent = 'Imdb rating: '+ movie.imdb;
         img.setAttribute('src', movie.img);
         img.setAttribute('alt', movie.title);
 
-        paneList.appendChild(newListItem);
+        carousel.appendChild(newListItem);
     }
 
     function handleError(error) {

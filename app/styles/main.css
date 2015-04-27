@@ -5,3 +5,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.carousel {
+    width: 80%;
+    height: 80%;
+}
